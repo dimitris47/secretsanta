@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="el_GR">
+<context>
+    <name>LangDialog</name>
+    <message>
+        <source>Select Language</source>
+        <translation>Επιλογή γλώσσας</translation>
+    </message>
+    <message>
+        <source>English (EN)</source>
+        <translation>English (EN)</translation>
+    </message>
+    <message>
+        <source>Ελληνικά (GR)</source>
+        <translation>Ελληνικά (GR)</translation>
+    </message>
+    <message>
+        <source>Choose one of the following languages:</source>
+        <translation>Διαλέξτε μία από τις ακόλουθες γλώσσες</translation>
+    </message>
+</context>
+<context>
+    <name>MainWindow</name>
+    <message>
+        <source>Secret Santa</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Number of Players</source>
+        <translation>Αριθμός παικτών</translation>
+    </message>
+    <message>
+        <source>Current Player</source>
+        <translation>Τρέχων παίκτης</translation>
+    </message>
+    <message>
+        <source>toolBar</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Enter Names</source>
+        <translation>Εισαγωγή ονομάτων</translation>
+    </message>
+    <message>
+        <source>Enter Pleyers&apos; Names</source>
+        <translation>Εισάγετε τα ονόματα των παικτών</translation>
+    </message>
+    <message>
+        <source>Get Result</source>
+        <translation>Αποτέλεσμα</translation>
+    </message>
+    <message>
+        <source>Get Your Result</source>
+        <translation>Το αποτέλεσμά σου</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>Σχετικά</translation>
+    </message>
+    <message>
+        <source>Player Names</source>
+        <translation>Ονόματα παικτών</translation>
+    </message>
+    <message>
+        <source>Name of player no.</source>
+        <translation>Όνομα παίκτη/παίκτριας νο.</translation>
+    </message>
+    <message>
+        <source>Player no.</source>
+        <translation>Παίκτης/Παίκτρια νο.</translation>
+    </message>
+    <message>
+        <source>No players</source>
+        <translation>Δεν υπάρχουν παίκτες</translation>
+    </message>
+    <message>
+        <source>No players added.</source>
+        <translation>Δεν έχουν εισαχθεί παίκτες</translation>
+    </message>
+    <message>
+        <source>Your result</source>
+        <translation>Το αποτέλεσμά σου</translation>
+    </message>
+    <message>
+        <source>, you are getting present for </source>
+        <translation>, θα πάρεις δώρο στον/στην </translation>
+    </message>
+    <message>
+        <source>There are no players yet.</source>
+        <translation>Δεν υπάρχουν ακόμη παίκτες</translation>
+    </message>
+    <message>
+        <source>Program Info</source>
+        <translation>Πληροφορίες προγράμματος</translation>
+    </message>
+    <message>
+        <source>Enter Players&apos; Names</source>
+        <translation>Εισαγωγή παικτών</translation>
+    </message>
+    <message>
+        <source>Change Language</source>
+        <translation>Επιλογή γλώσσας</translation>
+    </message>
+    <message>
+        <source>Change the application language</source>
+        <translation>Αλλάξτε τη γλώσσα της εφαρμογής</translation>
+    </message>
+    <message>
+        <source>Language change</source>
+        <translation>Αλλαγή γλώσσας</translation>
+    </message>
+    <message>
+        <source>Changes will take effect after application restart</source>
+        <translation>Οι αλλαγές θα εμφανιστούν στην επόμενη εκκίνηση της εφαρμογής</translation>
+    </message>
+</context>
+</TS>
