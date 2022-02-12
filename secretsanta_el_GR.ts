@@ -44,7 +44,7 @@
     </message>
     <message>
         <source>Enter Pleyers&apos; Names</source>
-        <translation>Εισάγετε τα ονόματα των παικτών</translation>
+        <translation type="vanished">Εισάγετε τα ονόματα των παικτών</translation>
     </message>
     <message>
         <source>Get Result</source>
@@ -113,6 +113,22 @@
     <message>
         <source>Changes will take effect after application restart</source>
         <translation>Οι αλλαγές θα εμφανιστούν στην επόμενη εκκίνηση της εφαρμογής</translation>
+    </message>
+    <message>
+        <source>Success</source>
+        <translation>Επιτυχία</translation>
+    </message>
+    <message>
+        <source>Lots shuffled successfully!</source>
+        <translation>Η κλήρωση ολοκληρώθηκε με επιτυχία!</translation>
+    </message>
+    <message>
+        <source>Failure</source>
+        <translation>Αποτυχία</translation>
+    </message>
+    <message>
+        <source>Failed to shuffle the lots. Please try again.</source>
+        <translation>Η κλήρωση δεν μπόρεσε να ολοκληρωθεί. Παρακαλώ ξαναπροσπαθήστε</translation>
     </message>
 </context>
 </TS>

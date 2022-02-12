@@ -51,7 +51,7 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::calculate(int N)
+bool MainWindow::calculate(int N)
 {
     players.clear();
     for (int i = 0; i < N; i++)
@@ -61,6 +61,8 @@ void MainWindow::calculate(int N)
     for (int i = 0; i < (int) sizeof(players); i++)
         if (players[i] == i)
             calculate(N);
+
+    return true;
 }
 
 
@@ -107,16 +109,20 @@ void MainWindow::on_actionEnter_Names_triggered()
     dialog.resize(columns * hFactor, rowsPerColumn * vFactor);
 
     if (dialog.exec() == QDialog::Accepted) {
-        calculate(N);
-        names.clear();
-        ui->comboBox->clear();
-        auto lines = dialog.findChildren<QLineEdit *>();
-        for (int i = 0; i < lines.count(); i++) {
-            QString name;
-            lines.at(i)->text() != "" ? name = lines.at(i)->text()
-                    : name = tr("Player no.") + QString::number(i + 1);
-            names.append(name);
-            ui->comboBox->addItem(name);
+        if (calculate(N)) {
+            names.clear();
+            ui->comboBox->clear();
+            auto lines = dialog.findChildren<QLineEdit *>();
+            for (int i = 0; i < lines.count(); i++) {
+                QString name;
+                lines.at(i)->text() != "" ? name = lines.at(i)->text()
+                        : name = tr("Player no.") + QString::number(i + 1);
+                names.append(name);
+                ui->comboBox->addItem(name);
+            }
+            QMessageBox::information(this, tr("Success"), tr("Lots shuffled successfully!"));
+        } else {
+            QMessageBox::warning(this, tr("Failure"), tr("Failed to shuffle the lots. Please try again."));
         }
     } else {
         QMessageBox::warning(this, tr("No players"), tr("No players added."));

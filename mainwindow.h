@@ -34,7 +34,7 @@ private:
     Ui::MainWindow *ui;
     QVector<int> players {};
     QStringList names;
-    void calculate(int N);
+    bool calculate(int N);
     bool isGreek;
 };
 

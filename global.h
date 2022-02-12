@@ -5,7 +5,7 @@
 
 const QString br("<br/>");
 const QString APPNAME("Secret Santa");
-const QString VERSION("1.0");
+const QString VERSION("1.1");
 const QString CONTRIBUTORS("Dimitris Psathas");
 
 const QString APPINFO("Program created by Dimitris Psathas" + br.repeated(2) +
