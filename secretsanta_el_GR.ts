@@ -43,10 +43,6 @@
         <translation>Εισαγωγή ονομάτων</translation>
     </message>
     <message>
-        <source>Enter Pleyers&apos; Names</source>
-        <translation type="vanished">Εισάγετε τα ονόματα των παικτών</translation>
-    </message>
-    <message>
         <source>Get Result</source>
         <translation>Αποτέλεσμα</translation>
     </message>
@@ -129,6 +125,22 @@
     <message>
         <source>Failed to shuffle the lots. Please try again.</source>
         <translation>Η κλήρωση δεν μπόρεσε να ολοκληρωθεί. Παρακαλώ ξαναπροσπαθήστε</translation>
+    </message>
+    <message>
+        <source>toggleTheme</source>
+        <translation>Εναλλαγή θέματος εμφάνισης</translation>
+    </message>
+    <message>
+        <source>Ctrl+T</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Switch to dark theme (Ctrl+T)</source>
+        <translation>Χρήση σκοτεινού θέματος εμφάνισης</translation>
+    </message>
+    <message>
+        <source>Switch to the system provided theme (Ctrl+T)</source>
+        <translation>Χρήση θέματος εμφάνισης προπεπιλογής του συστήματος</translation>
     </message>
 </context>
 </TS>

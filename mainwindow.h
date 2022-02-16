@@ -29,13 +29,18 @@ private slots:
     void on_actionEnter_Names_triggered();
     void on_actionGet_Result_triggered();
     void on_actionChange_Language_triggered();
+    void on_actionToggleTheme_triggered();
 
 private:
     Ui::MainWindow *ui;
+    void useDarkTheme();
+    void useDefaultTheme();
     QVector<int> players {};
     QStringList names;
     bool calculate(int N);
     bool isGreek;
+    bool isDark;
+    int calcCount;
 };
 
 #endif // MAINWINDOW_H

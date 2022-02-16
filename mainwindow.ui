@@ -98,6 +98,7 @@
    <addaction name="actionEnter_Names"/>
    <addaction name="actionGet_Result"/>
    <addaction name="actionChange_Language"/>
+   <addaction name="actionToggleTheme"/>
    <addaction name="actionAbout"/>
   </widget>
   <action name="actionEnter_Names">
@@ -143,6 +144,14 @@
    </property>
    <property name="toolTip">
     <string>Change the application language</string>
+   </property>
+  </action>
+  <action name="actionToggleTheme">
+   <property name="text">
+    <string>toggleTheme</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
    </property>
   </action>
  </widget>

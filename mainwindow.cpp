@@ -51,8 +51,56 @@ MainWindow::~MainWindow()
 }
 
 
+void MainWindow::useDarkTheme()
+{
+    QPalette dark_palette;
+
+    dark_palette.setColor(QPalette::Window, QColor(53, 53, 53));
+    dark_palette.setColor(QPalette::WindowText, Qt::white);
+    dark_palette.setColor(QPalette::Base, QColor(42, 42, 42));
+    dark_palette.setColor(QPalette::AlternateBase, QColor(53, 53, 53));
+    dark_palette.setColor(QPalette::ToolTipBase, Qt::white);
+    dark_palette.setColor(QPalette::ToolTipText, Qt::white);
+    dark_palette.setColor(QPalette::Text, Qt::white);
+    dark_palette.setColor(QPalette::Button, QColor(53, 53, 53));
+    dark_palette.setColor(QPalette::ButtonText, Qt::white);
+    dark_palette.setColor(QPalette::BrightText, Qt::red);
+    dark_palette.setColor(QPalette::Link, QColor(42, 130, 218));
+    dark_palette.setColor(QPalette::Highlight, QColor(42, 130, 218));
+    dark_palette.setColor(QPalette::HighlightedText, Qt::black);
+
+    QApplication::setPalette(dark_palette);
+    this->setStyleSheet("QToolTip { color: #ffffff; background-color: #00000f; border: 1px solid white; }");
+}
+
+
+void MainWindow::useDefaultTheme()
+{
+    QApplication::setPalette(this->style()->standardPalette());
+    this->setStyleSheet("");
+}
+
+
+void MainWindow::on_actionToggleTheme_triggered()
+{
+    if (isDark) {
+        useDefaultTheme();
+        isDark = false;
+        ui->actionToggleTheme->setIcon(QIcon(":/icons/weather-clear-night.png"));
+        ui->actionToggleTheme->setToolTip(tr("Switch to dark theme (Ctrl+T)"));
+    } else {
+        useDarkTheme();
+        isDark = true;
+        ui->actionToggleTheme->setIcon(QIcon(":/icons/weather-clear.png"));
+        ui->actionToggleTheme->setToolTip(tr("Switch to the system provided theme (Ctrl+T)"));
+    }
+}
+
+
 bool MainWindow::calculate(int N)
 {
+    if (++calcCount == 65535)
+        return false;
     players.clear();
     for (int i = 0; i < N; i++)
         players.append(i);
@@ -107,6 +155,8 @@ void MainWindow::on_actionEnter_Names_triggered()
     columns == 1 ? hFactor = 320 : hFactor = 256;
     rowsPerColumn < 8 ? vFactor = 56 : vFactor = 42;
     dialog.resize(columns * hFactor, rowsPerColumn * vFactor);
+
+    calcCount = 0;
 
     if (dialog.exec() == QDialog::Accepted) {
         if (calculate(N)) {
@@ -170,6 +220,7 @@ void MainWindow::on_actionAbout_triggered()
 void MainWindow::readPreferences()
 {
     QSettings settings;
+
     bool isMax = settings.value("isMaximized", false).toBool();
     if (isMax) {
         showMaximized();
@@ -177,16 +228,25 @@ void MainWindow::readPreferences()
         const QByteArray geometry = settings.value("geometry", QByteArray()).toByteArray();
         restoreGeometry(geometry);
     }
+
     isGreek = settings.value("isGreek", false).toBool();
+
+    bool dark = settings.value("isDarkTheme", false).toBool();
+    isDark = !dark;
+    on_actionToggleTheme_triggered();
 }
 
 
 void MainWindow::savePreferences()
 {
     QSettings settings;
+
     settings.setValue("isMaximized", isMaximized());
     if (!isMaximized())
         settings.setValue("geometry", saveGeometry());
+
+    settings.setValue("isDarkTheme", isDark);
+
     settings.sync();
 }
 
