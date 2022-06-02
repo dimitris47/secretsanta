@@ -5,4 +5,6 @@ Not only that, but a practical problem arises as well: a player might draw their
 
 SecretSanta offers a software solution to the problem, using recursion to produce an equal-probabilities Secret Santa drawing for up to 99 people.
 
-Enjoy the program and your gift!
+There is also an Android version of this application, you can find it [here](https://github.com/dimitris47/SecretSantaM)!
+
+Enjoy the program... and your gift!
