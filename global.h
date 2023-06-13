@@ -5,7 +5,7 @@
 
 const QString br("<br/>");
 const QString APPNAME("Secret Santa");
-const QString VERSION("1.2");
+const QString VERSION("1.3");
 const QString CONTRIBUTORS("Dimitris Psathas");
 
 const QString APPINFO("Program created by Dimitris Psathas" + br.repeated(2) +
@@ -14,6 +14,6 @@ const QString APPINFO("Program created by Dimitris Psathas" + br.repeated(2) +
                       "Qt libraries used under (L)GPL3" + br +
                       "Application icon by <a href='https://icons8.com'>icons8.com</a>" + br +
                       "In-app icons by the Ubuntu Yaru theme community" + br.repeated(2) +
-                      "&copy; 2020-2021 Dimitris Psathas");
+                      "&copy; 2020-2023 Dimitris Psathas");
 
 #endif // GLOBAL_H

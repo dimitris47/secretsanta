@@ -107,8 +107,8 @@
         <translation>Αλλαγή γλώσσας</translation>
     </message>
     <message>
-        <source>Changes will take effect after application restart</source>
-        <translation>Οι αλλαγές θα εμφανιστούν στην επόμενη εκκίνηση της εφαρμογής</translation>
+        <source>Changes will take effect after application restart. Restart now?</source>
+        <translation>Οι αλλαγές θα εμφανιστούν στην επόμενη εκκίνηση της εφαρμογής. Επανεκκίνηση τώρα;</translation>
     </message>
     <message>
         <source>Success</source>

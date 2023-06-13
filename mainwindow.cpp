@@ -29,6 +29,7 @@
 
 #include <QLineEdit>
 #include <QMessageBox>
+#include <QProcess>
 #include <QPushButton>
 #include <QDialogButtonBox>
 #include <QScrollArea>
@@ -99,16 +100,20 @@ void MainWindow::on_actionToggleTheme_triggered()
 
 bool MainWindow::calculate(int N)
 {
-    if (++calcCount == 65535)
+    if (++calcCount == 65535) {
         return false;
+    }
     players.clear();
-    for (int i = 0; i < N; i++)
+    for (int i = 0; i < N; i++) {
         players.append(i);
+    }
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
     shuffle (players.begin(), players.end(), std::default_random_engine(seed));
-    for (int i = 0; i < (int) sizeof(players); i++)
-        if (players[i] == i)
+    for (int i = 0; i < (int) sizeof(players); i++) {
+        if (players[i] == i) {
             calculate(N);
+        }
+    }
 
     return true;
 }
@@ -197,15 +202,23 @@ void MainWindow::on_actionGet_Result_triggered()
 void MainWindow::on_actionChange_Language_triggered()
 {
     LangDialog dialog(this);
-    if (dialog.exec() == QDialog::Accepted)
+    if (dialog.exec() == QDialog::Accepted) {
         if (dialog.greek != isGreek) {
             isGreek = dialog.greek;
             QSettings settings;
             settings.setValue("isGreek", isGreek);
             settings.sync();
-            QMessageBox::information(this, tr("Language change"),
-                                     tr("Changes will take effect after application restart"));
+            auto box = QMessageBox::question(this,
+                                             tr("Language change"),
+                                             tr("Changes will take effect after application restart. Restart now?"));
+            if (box == QMessageBox::No) {
+                return;
+            } else {
+                QProcess::startDetached(QApplication::applicationFilePath(), {});
+                qApp->quit();
+            }
         }
+    }
 }
 
 
@@ -242,11 +255,10 @@ void MainWindow::savePreferences()
     QSettings settings;
 
     settings.setValue("isMaximized", isMaximized());
-    if (!isMaximized())
+    if (!isMaximized()) {
         settings.setValue("geometry", saveGeometry());
-
+    }
     settings.setValue("isDarkTheme", isDark);
-
     settings.sync();
 }
 
