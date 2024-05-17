@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>311</width>
+    <height>133</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Secret Santa</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="secretsanta.qrc">
+    <normaloff>:/icons/santa.png</normaloff>:/icons/santa.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="numLabel">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Number of Players</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QSpinBox" name="spinBox">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="currLabel">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Current Player</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QComboBox" name="comboBox">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="contextMenuPolicy">
+    <enum>Qt::PreventContextMenu</enum>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionEnter_Names"/>
+   <addaction name="actionGet_Result"/>
+   <addaction name="actionChange_Language"/>
+   <addaction name="actionAbout"/>
+  </widget>
+  <action name="actionEnter_Names">
+   <property name="icon">
+    <iconset resource="secretsanta.qrc">
+     <normaloff>:/icons/edit.png</normaloff>:/icons/edit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Enter Names</string>
+   </property>
+   <property name="toolTip">
+    <string>Enter Players' Names</string>
+   </property>
+  </action>
+  <action name="actionGet_Result">
+   <property name="icon">
+    <iconset resource="secretsanta.qrc">
+     <normaloff>:/icons/gtk-apply.png</normaloff>:/icons/gtk-apply.png</iconset>
+   </property>
+   <property name="text">
+    <string>Get Result</string>
+   </property>
+   <property name="toolTip">
+    <string>Get Your Result</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="secretsanta.qrc">
+     <normaloff>:/icons/help-about.png</normaloff>:/icons/help-about.png</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionChange_Language">
+   <property name="icon">
+    <iconset resource="secretsanta.qrc">
+     <normaloff>:/icons/preferences-desktop-locale.png</normaloff>:/icons/preferences-desktop-locale.png</iconset>
+   </property>
+   <property name="text">
+    <string>Change Language</string>
+   </property>
+   <property name="toolTip">
+    <string>Change the application language</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="secretsanta.qrc"/>
+ </resources>
+ <connections/>
+</ui>
