@@ -8,4 +8,3 @@ SecretSanta offers a software solution to the problem, using recursion to produc
 There is also an Android version of this application, you can find it [here](https://github.com/dimitris47/SecretSantaM)!
 
 Enjoy the program... and your gift!
-# secretsanta
